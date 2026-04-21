@@ -1,5 +1,4 @@
 <style>
-  /* 暴力隐藏网页渲染出来的第一个 h1（即系统强制塞进来的那个带横线的空壳） */
   h1:first-of-type { 
     display: none !important; 
   }
@@ -9,6 +8,9 @@
 
 **An LLM-Based Automated Proof Generation and Self-Correction System for Rigorous Statistical Derivations**, by **[StatAI Lab](https://statai-lab.github.io/)**, School of Statistics and Data Science, Shanghai University of Finance and Economics
 
+<video width="100%" autoplay loop muted playsinline>
+  <source src="./videos/demo.mp4" type="video/mp4">
+</video>
 
 # Core Technical Features
 
@@ -32,11 +34,11 @@ By analyzing 80,000+ failure trajectories from LLM attempts on StatEval, we buil
 
 # Key Contributions
 
-- **Retrieval-Driven Proof Framework Refinement**: Bi-directional max-matching + LLM-as-Judge to dynamically refine initial drafts into logically robust macro-skeletons
+- **Retrieval-Driven Proof Framework Refinement**:  We employ a bi-directional max-matching algorithm and an LLM-as-a-Judge mechanism to retrieve optimal reference frameworks. This dynamically refines the initial draft into a logically robust macro-skeleton, preventing early trajectory drift.
 
-- **Data-Driven Snippet-Level Self-Correction**: First-of-its-kind empirical fault repository enabling targeted rectification of micro-level logical leaps
+- **Data-Driven Snippet-Level Self-Correction**: Leveraging a large-scale repository of empirical LLM reasoning failures, we introduce a dynamic self-correction mechanism to identify and surgically rectify subtle micro-level logical leaps that standard self-reflection methods fail to detect. 
 
-- **Interactive Proof Assistant Platform**: Modular pipeline with Human-in-the-Loop workflow, publicly available at [statprover.com](https://statprover.com)
+- **Interactive Proof Assistant Platform**: We present StatProver, a modular six-stage pipeline that supports both end-to-end automated proof generation and flexible HIL workflows. This system is officially deployed and publicly accessible at https://statprover.com.
 
 
 # Try It Out
