@@ -41,7 +41,7 @@ By analyzing 80,000+ failure trajectories from LLM attempts on StatEval, we buil
 
 # Try It Out
 
-**[Download Full Paper (PDF)](StatProver_Technical_Report.pdf)**
+**[Download Full StatProver Technical Report (PDF)](StatProver_Technical_Report.pdf)**
 
 **[Official Website](https://statprover.com) : 3 free use per day!**
 
