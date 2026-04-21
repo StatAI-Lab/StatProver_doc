@@ -10,13 +10,6 @@
 **An LLM-Based Automated Proof Generation and Self-Correction System for Rigorous Statistical Derivations**, by **[StatAI Lab](https://statai-lab.github.io/)**, School of Statistics and Data Science, Shanghai University of Finance and Economics
 
 
-# Key Innovation: Two-Level Error Correction
-
-| Level | Mechanism | What It Fixes |
-|-------|-----------|---------------|
-| **Macro** | Dynamic Framework Refinement | Early trajectory drift, flawed proof skeletons |
-| **Micro** | Snippet-Level Self-Correction | Local logical leaps, attention decay over long chains |
-
 # Core Technical Features
 
 **1. Bi-directional Max-Matching Retrieval**
