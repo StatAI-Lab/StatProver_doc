@@ -1,6 +1,6 @@
 <style>
-  /* 强制隐藏系统自带的头部区块及横线 */
-  header, .page-header, h1.project-name, h2.project-tagline { 
+  /* 暴力隐藏网页渲染出来的第一个 h1（即系统强制塞进来的那个带横线的空壳） */
+  h1:first-of-type { 
     display: none !important; 
   }
 </style>
