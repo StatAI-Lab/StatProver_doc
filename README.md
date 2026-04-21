@@ -7,9 +7,6 @@
 
 ![StatProver](figs/logo.png)
 
-
-
-
 <p align="center">
   <b>An  Automated Proof Generation and Self-Correction Agent for Rigorous Statistical Derivations</b>
 </p>
@@ -21,6 +18,11 @@ Recently, the team **[StatAI Lab](https://statai-lab.github.io/)**, led by Profe
 ## What We Do
 
 Recent benchmarks, such as [StatEval](https://stateval.github.io/), have evaluated state-of-the-art models in this area, showing their limitations in solving research-level proofs. Therefore, a dedicated framework is needed to improve LLM reasoning capabilities for statistical problem-solving. The system we developed aims to solve the issues of logical gaps and formula hallucinations that frequently occur when LLMs handle highly complex statistical derivations, realizing fully automated generation and self-correction from statistical propositions to rigorous LaTeX proofs.
+
+<video width="100%" autoplay loop muted playsinline>
+  <source src="./videos/demo.mp4" type="video/mp4">
+</video>
+
 
 StatProver's design balances the convenience of automation with the rigor of scientific research: the system not only supports one-click, end-to-end fully automated proof generation, but also introduces a flexible human-AI collaboration mechanism. This workflow allows users to manually intervene at key nodes—such as keyword retrieval, framework generation, and error correction—ensuring that the derivation process remains highly controllable and accurate.
 
