@@ -16,7 +16,7 @@
 
 
 
-Recently, the team StatAI Lab, led by Professor **[Fan Zhou](https://mlzxzhou.github.io/)** from the School of Statistics and Data Science at Shanghai University of Finance and Economics officially released **StatProver**. Following the statistical reasoning evaluation benchmark **[StatEval](https://stateval.github.io/)**, this is another practical achievement by the **[StatAI Lab](https://statai-lab.github.io/)** in enhancing the statistical proving capabilities of Large Language Models (LLMs). 
+Recently, the team **[StatAI Lab](https://statai-lab.github.io/)**, led by Professor **[Fan Zhou](https://mlzxzhou.github.io/)** from the School of Statistics and Data Science at Shanghai University of Finance and Economics officially released **StatProver**. Following the statistical reasoning evaluation benchmark **[StatEval](https://stateval.github.io/)**, this is another practical achievement by the StatAI Lab in enhancing the statistical proving capabilities of Large Language Models (LLMs). 
 
 ## What We Do
 
@@ -56,4 +56,4 @@ StatProver does not simply have the model generate an answer directly; instead, 
 If you have any questions or are interested in collaboration, please feel free to reach out to our laboratory:
 
 * **[StatAI Lab](https://statai-lab.github.io/)**: [statai@163.com](mailto:statai@163.com)
-* **[Prof. Fan Zhou](https://mlzxzhou.github.io/)** (Principal Investigator): [zhoufan@mail.shufe.edu.cn](mailto:zhoufan@mail.shufe.edu.cn)
+* **[Prof. Fan Zhou](https://mlzxzhou.github.io/)** (Project Leader): [zhoufan@mail.shufe.edu.cn](mailto:zhoufan@mail.shufe.edu.cn)
