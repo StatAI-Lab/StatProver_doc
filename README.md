@@ -8,44 +8,67 @@
 ![StatProver](figs/logo.png)
 
 <p align="center">
-  <b>An  Automated Proof Generation and Self-Correction Agent for Rigorous Statistical Derivations</b>
+  <b>An Automated Statistical Proof Assistant</b>
 </p>
 
+**StatProver** is developed under the leadership of **[Fan Zhou](https://mlzxzhou.github.io/)** at **[StatAI Lab](https://statai-lab.github.io/)**, School of Statistics and Data Science, Shanghai University of Finance and Economics. As part of our broader research on statistical reasoning with large language models, this project reflects our effort to build reliable AI systems for rigorous statistical derivation.
 
 
-Recently, the team **[StatAI Lab](https://statai-lab.github.io/)**, led by Professor **[Fan Zhou](https://mlzxzhou.github.io/)** from the School of Statistics and Data Science at Shanghai University of Finance and Economics officially released **StatProver**. Following the statistical reasoning evaluation benchmark **[StatEval](https://stateval.github.io/)**, this is another practical achievement by the StatAI Lab in enhancing the statistical proving capabilities of Large Language Models (LLMs). 
+## What StatProver Does
 
-## What We Do
-
-Recent benchmarks, such as [StatEval](https://stateval.github.io/), have evaluated state-of-the-art models in this area, showing their limitations in solving research-level proofs. Therefore, a dedicated framework is needed to improve LLM reasoning capabilities for statistical problem-solving. The system we developed aims to solve the issues of logical gaps and formula hallucinations that frequently occur when LLMs handle highly complex statistical derivations, realizing fully automated generation and self-correction from statistical propositions to rigorous LaTeX proofs.
+StatProver provides a structured workflow for automated proof generation and self-correction, helping users transform a statistical proposition or source document into a complete LaTeX proof.
 
 <video width="100%" autoplay loop muted playsinline>
   <source src="./videos/demo.mp4" type="video/mp4">
 </video>
 
+The system supports both end-to-end automated proof construction and flexible human-in-the-loop interaction. Users can intervene at key stages such as problem refinement, framework selection, and error correction, making the proof process both efficient and controllable.
 
-StatProver's design balances the convenience of automation with the rigor of scientific research: the system not only supports one-click, end-to-end fully automated proof generation, but also introduces a flexible human-AI collaboration mechanism. This workflow allows users to manually intervene at key nodes—such as keyword retrieval, framework generation, and error correction—ensuring that the derivation process remains highly controllable and accurate.
 
-## How We Do This
 
-StatProver does not simply have the model generate an answer directly; instead, it ensures the quality of the proof through a robust six-stage pipeline:
+## How StatProver Works
+
+StatProver does not rely on one-shot proof generation. Instead, it organizes the derivation process into a six-stage pipeline that supports both automated execution and human intervention at key checkpoints.
 
 ![StatProver Pipeline Architecture](figs/StatProver.png)
 
-* **Multimodal Input** Supports text descriptions or uploaded PDF documents to directly identify the proof requirements.
-* **Initial Retrieval** Extracts keywords from the problem and calculates embedding cosine similarity to match 40 similar cases from our vector database.
-* **Framework Refinement** Refines the initially generated proof framework by cross-referencing the retrieved similar cases.
-* **Proof Generation** Generates a complete initial draft of the proof based on the refined framework.
-* **Self-Correction** Utilizes an exclusive "error snippet database" to conduct fine-grained, snippet-level logical checks.
-* **Final Correction** Summarizes all identified errors, performs targeted fixes on the initial draft, and outputs the final, rigorous proof.
+* **Step 1. Interactive Problem Refinement**
 
-## Highlights
+The system first checks whether the input problem is complete and identifies missing assumptions, definitions, or notation. Users can supplement these details manually or let the model help complete them, producing a structured problem description with explicit prerequisites and proof goals.
 
-- **Retrieval-Driven Proof Framework Refinement**:  We employ a bi-directional max-matching algorithm and an LLM-as-a-Judge mechanism to retrieve optimal reference frameworks. This dynamically refines the initial draft into a logically robust macro-skeleton, preventing early trajectory drift.
+* **Step 2. Candidate Retrieval and User Verification**
 
-- **Data-Driven Snippet-Level Self-Correction**: Leveraging a large-scale repository of empirical LLM reasoning failures on the statistical reasoning evaluation benchmark [StatEval](https://stateval.github.io/), we introduce a dynamic self-correction mechanism to identify and surgically rectify subtle micro-level logical leaps that standard self-reflection methods fail to detect. 
+StatProver extracts core keywords from the problem and retrieves relevant reference cases from a large statistical problem database using embedding-based similarity. It then narrows these candidates and presents the most relevant ones for user verification before they are used in later stages.
 
-- **Interactive Proof Assistant Platform**: We present StatProver, a modular six-stage pipeline that supports both end-to-end automated proof generation and flexible HIL workflows. This system is officially deployed and publicly accessible at https://statprover.com.
+* **Step 3. Dynamic Framework Refinement**
+
+Using the verified reference cases, the system evaluates whether their proof frameworks provide useful methodological guidance for the current task. When appropriate, it refines the initial proof skeleton by incorporating helpful proof strategies while keeping the target problem itself as the primary source of structure.
+
+* **Step 4. Draft Proof Generation**
+
+Based on the refined framework and the completed problem description, StatProver generates a full draft proof with detailed intermediate derivation steps rather than a short final answer.
+
+* **Step 5. Data-Driven Snippet-Level Diagnosis**
+
+The generated proof is segmented into fine-grained logical units and checked against a repository of historical error patterns. This allows the system to detect local reasoning flaws, logical jumps, and other proof-level inconsistencies that are often missed by generic self-reflection.
+
+* **Step 6. Global Correction and Final Output**
+
+Finally, StatProver performs targeted correction based on the diagnosed issues and consolidates the revised reasoning into a rigorous final proof in LaTeX format.
+
+## Key Contributions
+
+**Contribution 1. Retrieval-Driven Framework Refinement**
+
+StatProver retrieves reference cases from a database of 40,366 research-level statistical problems drawn from [StatEval](https://stateval.github.io/). Through similarity-based retrieval and framework verification, the system refines the initial proof skeleton and improves the global structure of the derivation.
+
+**Contribution 2. Data-Driven Snippet-Level Self-Correction**
+
+StatProver also uses a large empirical fault repository containing over 80,000 error snippets, constructed from LLM failure trajectories on StatEval’s research-level data. This repository supports fine-grained diagnosis and targeted correction, allowing the system to identify subtle logical gaps and proof errors beyond standard self-reflection.
+
+**Contribution 3. Interactive Proof Assistant Platform**
+
+StatProver integrates these components into a unified proof assistant that supports both fully automated generation and flexible human-in-the-loop workflows. The platform is publicly available and designed to assist researchers in producing rigorous statistical proofs more efficiently and reliably. This system is officially deployed and publicly accessible at https://statprover.com.
 
 ## Try It Out!
 
