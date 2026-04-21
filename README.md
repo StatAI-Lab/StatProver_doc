@@ -121,12 +121,12 @@ The selected task requires proving two topological properties based on a specifi
 > **Example Problem:**
 >
 > *Let* $G = (\Psi', \mathcal{E})$ *be a directed acyclic graph (DAG)* *where* $\Psi' = (X, \Theta)$ *represents the set of all variables, consisting of observable random variables* $X$ *and parameters* $\Theta$.
-> *Suppose we have three modules* $\Psi'_A$, $\Psi'_B$, *and* $\Psi'_C$ *formed according to Rule 1 (Constructing self-contained modules), and let* $\Psi'_T = \Psi'_B \cup \Psi'_C$.
-> *Define the following partitioned sets:* $\Psi_{BC} = (\Psi'_B \cap \Psi'_C) \setminus \Psi'_A$, $\Psi_{\mathrm{B}\!-\!} = \Psi'_B \setminus (\Psi'_A \cup \Psi'_C)$, *and* $\Psi_{\mathrm{C}\!-\!} = \Psi'_C \setminus (\Psi'_A \cup \Psi'_B)$.
+> *Suppose we have three modules* $\Psi'_A$, $\Psi'_B$, *and* $\Psi'_C$ *formed according to Rule 1 (Constructing self-contained modules), and let* $\Psi'_T = \Psi'_B \cup \Psi'_C$ *.*
+> *Define the following partitioned sets:* $\Psi_{BC} = (\Psi'_B \cap \Psi'_C) \setminus \Psi'_A$ *,* $\Psi_{\mathrm{B}\!-\!} = \Psi'_B \setminus (\Psi'_A \cup \Psi'_C)$ *, and* $\Psi_{\mathrm{C}\!-\!} = \Psi'_C \setminus (\Psi'_A \cup \Psi'_B)$ *.*
 > *Let* $X_B^*$ *and* $X_C^*$ *be the observable variables of primary interest used to initialize modules* $B$ *and* $C$ *respectively.*
 > *Let* $\Psi'_S = (\Psi'_A \cup \Psi'_B \cup \Psi'_C)^c$ *be the set of variables not contained in any module. Given that for any module* $M$ *formed by Rule 1,* $ch(\Psi'^{M^c}) = \varnothing$ *and every variable in* $M$ *has a directed path to an observable in* $X_M^*$ *, prove that:*
 >
-> *(1) if* $\Psi_{BC} \neq \varnothing$, *there exists at least one edge* $a \to b$ *where* $a \in \Psi_{BC}$ *and* $b \in (\Psi_{\mathrm{B}\!-\!} \cup X_B^*) \cup (\Psi_{\mathrm{C}\!-\!} \cup X_C^*)$
+> *(1) if* $\Psi_{BC} \neq \varnothing$, *there exists at least one edge* $a \to b$ *where* $a \in \Psi_{BC}$ *and* $b \in (\Psi_{\mathrm{B}\!-\!} \cup X_B^*) \cup (\Psi_{\mathrm{C}\!-\!} \cup X_C^*)$ *;*
 >
 > *(2) if* $\Psi_{BC} = \varnothing$, *then* $\Psi'_B \perp \Psi'_C \mid \Psi'_A$.
 
