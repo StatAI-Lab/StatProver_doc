@@ -1,3 +1,10 @@
+<style>
+  /* 强制隐藏系统自带的头部区块及横线 */
+  header, .page-header, h1.project-name, h2.project-tagline { 
+    display: none !important; 
+  }
+</style>
+
 # [StatProver](https://statprover.com)
 
 **An LLM-Based Automated Proof Generation and Self-Correction System for Rigorous Statistical Derivations**, by **[StatAI Lab](https://statai-lab.github.io/)**, School of Statistics and Data Science, Shanghai University of Finance and Economics
