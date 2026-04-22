@@ -68,7 +68,7 @@ StatProver also uses a large empirical fault repository containing over **80,000
 
 **Contribution 3. Interactive Proof Assistant Platform**
 
-StatProver integrates these components into a unified proof assistant that supports both fully automated generation and flexible human-in-the-loop workflows. The platform is publicly available and designed to assist researchers in producing rigorous statistical proofs more efficiently and reliably. This system is officially deployed and publicly accessible at **https://statprover.com**.
+StatProver integrates these components into a unified proof assistant that supports both fully automated generation and flexible human-in-the-loop workflows. The platform is publicly available and designed to assist researchers in producing rigorous statistical proofs more efficiently and reliably. This system is officially deployed and publicly accessible at **[https://statprover.com](https://statprover.com)**.
 
 ## Try It Out!
 
