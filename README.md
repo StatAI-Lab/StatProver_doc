@@ -16,7 +16,7 @@
 
 ## What StatProver Does
 
-StatProver provides a structured workflow for automated proof generation and self-correction, helping users transform a statistical proposition or source document into a complete LaTeX proof.
+StatProver provides a structured workflow for automated proof generation and self-correction, helping users transform a statistical proposition or source document into a complete LaTeX proof. Built on the comprehensive statistical reasoning benchmark **[StatEval](https://stateval.github.io/)**, StatProver retrieves relevant references to refine proof skeletons and performs self-correction by learning from the strategies and details of similar theoretical proofs.
 
 <video width="100%" autoplay loop muted playsinline>
   <source src="https://raw.githubusercontent.com/StatAI-Lab/StatProver_doc/main/videos/demo.mp4" type="video/mp4">
@@ -60,7 +60,7 @@ Finally, StatProver performs targeted correction based on the diagnosed issues a
 
 **Contribution 1. Retrieval-Driven Framework Refinement**
 
-StatProver retrieves reference cases from a database of **40,366** research-level statistical problems drawn from **[StatEval](https://stateval.github.io/)**. Through similarity-based retrieval and framework verification, the system refines the initial proof skeleton and improves the global structure of the derivation.
+StatProver retrieves reference cases from a database of **40,366** research-level statistical problems drawn from StatEval. Through similarity-based retrieval and framework verification, the system refines the initial proof skeleton and improves the global structure of the derivation.
 
 **Contribution 2. Data-Driven Snippet-Level Self-Correction**
 
