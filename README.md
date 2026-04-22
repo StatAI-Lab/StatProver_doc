@@ -60,11 +60,11 @@ Finally, StatProver performs targeted correction based on the diagnosed issues a
 
 **Contribution 1. Retrieval-Driven Framework Refinement**
 
-StatProver retrieves reference cases from a database of **40,366** research-level statistical problems drawn from StatEval. Through similarity-based retrieval and framework verification, the system refines the initial proof skeleton and improves the global structure of the derivation.
+StatProver retrieves reference cases from a database of **40,366** research-level statistical problems drawn from **[StatEval](https://stateval.github.io/)**. Through similarity-based retrieval and framework verification, the system refines the initial proof skeleton and improves the global structure of the derivation.
 
 **Contribution 2. Data-Driven Snippet-Level Self-Correction**
 
-StatProver also uses a large empirical fault repository containing over **80,000** error snippets, constructed from LLM failure trajectories on StatEval’s research-level data. This repository supports fine-grained diagnosis and targeted correction, allowing the system to identify subtle logical gaps and proof errors beyond standard self-reflection.
+StatProver also uses a large empirical fault repository containing over **80,000** error snippets, constructed from LLM failure trajectories on **[StatEval’s](https://stateval.github.io/)** research-level data. This repository supports fine-grained diagnosis and targeted correction, allowing the system to identify subtle logical gaps and proof errors beyond standard self-reflection.
 
 **Contribution 3. Interactive Proof Assistant Platform**
 
